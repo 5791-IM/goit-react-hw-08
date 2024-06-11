@@ -1,0 +1,146 @@
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.textItem {
+  margin: 5px 0;
+}
+
+.deleteBtn {
+  padding: 5px 10px;
+  background-color: #ccc;
+  color: black;
+  border: 1px solid #afaaaa;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.deleteBtn:hover,
+.deleteBtn:focus {
+  background-color: #ece2e2;
+  border-color: #6a6666;
+  outline: none;
+}
+
+/* .contactContainer {
+  width: 250px;
+  margin: 5px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #afaaaa;
+  border-radius: 8px;
+}
+
+.textItem {
+  margin: 5px 0;
+}
+
+.deleteBtn {
+  padding: 5px 10px;
+  background-color: #ccc;
+  color: black;
+  border: 1px solid #afaaaa;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.deleteBtn:hover,
+.deleteBtn:focus {
+  background-color: #ece2e2;
+  border-color: #6a6666;
+  outline: none;
+} */
+
+.nameIcon::before {
+  content: "\f007";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+.numberIcon::before {
+  content: "\f095";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+/* .contact {
+  width: 250px;
+  margin: 5px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #afaaaa;
+  border-radius: 8px;
+}
+
+.text {
+  margin: 5px 0;
+}
+
+.btn {
+  padding: 5px 10px;
+  background-color: #ccc;
+  color: black;
+  border: 1px solid #afaaaa;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #ece2e2;
+  border-color: #6a6666;
+  outline: none;
+}
+
+.name::before {
+  content: "\f007";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+.number::before {
+  content: "\f095";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 8px;
+} */
+
+/* .contact {
+  width: 250px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #afaaaa;
+  border-radius: 4px;
+}
+
+.text {
+  margin: 0;
+}
+
+.btn {
+  padding: 5px 10px;
+  background-color: #ccc;
+  color: black;
+  border: 1px solid #afaaaa;
+  border-radius: 4px;
+  cursor: pointer;
+} */

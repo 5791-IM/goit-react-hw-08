@@ -1,0 +1,19 @@
+.label {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: black;
+}
+.searchBox {
+  width: 250px;
+  height: 40px;
+  padding: 5px;
+
+  border: 1px solid #afaaaa;
+  border-radius: 8px;
+}
+
+.searchBar:hover,
+.searchBar:focus {
+  border-color: #6a6666;
+  outline: none;
+}
