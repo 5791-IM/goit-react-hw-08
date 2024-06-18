@@ -1,39 +1,37 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { contactsReducer } from "./contactsSlice";
-import { filtersReducer } from "./filtersSlice";
+import {
+  FLUSH,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+  persistReducer,
+  persistStore,
+} from "redux-persist";
+import storage from "redux-persist/lib/storage";
+import { contactsReducer } from "./contacts/slice";
+import { filtersReducer } from "./filters/slice";
+import { authReducer } from "./auth/slice";
+
+const authPersistConfig = {
+  key: "auth",
+  storage,
+  whiteList: ["token"],
+};
 
 export const store = configureStore({
   reducer: {
-    contacts: contactsReducer,
+    auth: persistReducer(authPersistConfig, authReducer),
+    conacts: contactsReducer,
     filters: filtersReducer,
   },
+
+  middleware: (getDefaultMidleware) =>
+    getDefaultMidleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REGISTER, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 });
 
-export default store;
-
-// import { configureStore } from "@reduxjs/toolkit";
-// import contactsReducer from "./contactsSlice";
-// import filtersReduser from "./filtersSlice";
-// import storage from "redux-persist/lib/storage";
-// import { combineReducers } from "redux";
-// import { persistReducer, persistStore } from "redux-persist";
-
-// const contactsPersistConfig = {
-//   key: "contacts",
-//   storage,
-// };
-
-// const rootReducer = combineReducers({
-//   contacts: persistReducer(contactsPersistConfig, contactsReducer),
-//   filters: filtersReduser,
-// });
-
-// export const store = configureStore({
-//   reducer: rootReducer,
-//   middleware: (getDefaultMiddleware) =>
-//     getDefaultMiddleware({
-//       serializableCheck: false,
-//     }),
-// });
-
-// export const pesistor = persistStore(store);
+export const persistor = persistStore(store);
